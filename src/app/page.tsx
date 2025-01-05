@@ -1,10 +1,12 @@
 "use client";
 
-import Footer from "@/app/components/Footer";
+import Footer from "@/app/components/navigation/Footer";
 import styles from "@/app/styles/home.module.scss";
 import { roastedArray, roastedHeaderImages } from "./data/roastedArray";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { steps } from "./data/steps";
+import { StepProps } from "./types";
 
 const Home = () => {
     const [currentHeaderImageIndex, setCurrentHeaderImageIndex] = useState(0);
@@ -78,7 +80,25 @@ const Home = () => {
                     </div>
 
                     <div className={styles.heroImagesWrapper}>
-                        <div>
+                        <div className={styles.stepsCountWrapper}>
+                            {steps.map((step: StepProps, index: number) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className={styles.singleCount}
+                                    >
+                                        <span>{index + 1}</span>
+
+                                        <div>
+                                            <i>{step.icon}</i>
+                                            <p>{step.title}</p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        <div className={styles.imageSection}>
                             <div className={styles.macStyleWindow}>
                                 <div className={styles.macStyleWindowHeader}>
                                     <span></span>
@@ -95,32 +115,6 @@ const Home = () => {
                                     width={600}
                                     height={290}
                                 />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <span>1</span>
-
-                            <div>
-                                <p>Submit your website</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span>2</span>
-
-                            <div>
-                                <p>Make a secure payment</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span>3</span>
-
-                            <div>
-                                <p>Get figma file in 1-2 days</p>
                             </div>
                         </div>
                     </div>

@@ -146,10 +146,11 @@
 
         .heroImagesWrapper {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            // justify-content: center;
             align-items: center;
 
-            div {
+            .imageSection {
                 width: 720px;
 
                 .macStyleWindow {
@@ -182,8 +183,48 @@
 
                     img {
                         width: 100%;
-                        height: 470px;
+                        height: 465px;
                         border-radius: 8px;
+                    }
+                }
+            }
+
+            .stepsCountWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 15px;
+                gap: 100px;
+                background: radial-gradient(circle, rgba(0, 0, 0, 0.5), black);
+                position: relative;
+                bottom: 0;
+
+                .singleCount {
+                    span {
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        font-family: var(--font-inter);
+                        font-weight: 300 !important;
+                        font-size: 15px;
+                        letter-spacing: 0.03px;
+                        color: #ffffffad;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        margin-top: 5px;
+
+                        p {
+                            font-family: var(--font-inter);
+                            font-weight: 300 !important;
+                            font-size: 15px;
+                            letter-spacing: 0.03px;
+                            color: #ffffffad;
+                            margin-top: 8px;
+                        }
                     }
                 }
             }
