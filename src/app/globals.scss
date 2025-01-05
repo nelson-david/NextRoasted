@@ -1,0 +1,48 @@
+:root {
+    --white-color: #ffffff;
+    --yellow-color: rgb(223, 255, 26);
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../assets/background.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--white-color);
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    object-position: center;
+    object-fit: cover;
+}
+.spin svg {
+    -webkit-animation: spin-animation 1.5s infinite linear;
+    animation: spin-animation 1.5s infinite linear;
+}
+
+/* CSS Animations */
+@-webkit-keyframes spin-animation {
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    0% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spin-animation {
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    0% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
