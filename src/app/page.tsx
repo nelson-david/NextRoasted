@@ -69,8 +69,8 @@ const Home = () => {
                                     <Image
                                         src={img}
                                         alt={`${index}img`}
-                                        width={32}
-                                        height={32}
+                                        width={31}
+                                        height={31}
                                         key={index}
                                     />
                                 );

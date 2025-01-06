@@ -2,7 +2,7 @@
     height: 100%;
 
     .heroSection {
-        padding: 85px 50px;
+        padding: 90px 50px;
         h3 {
             font-family: var(--font-inter);
             font-weight: 600 !important;
@@ -17,6 +17,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: 15px;
 
             span {
                 text-transform: uppercase;
@@ -46,25 +47,26 @@
         .titleWrapper {
             display: flex;
             justify-content: center;
+            padding-top: 15px;
 
             div {
-                width: 510px;
+                width: 530px;
 
                 h1 {
                     font-size: 36px;
                     text-align: center;
                     line-height: 48px;
-                    letter-spacing: -0.05em;
+                    letter-spacing: -0.03em;
                     font-weight: 500 !important;
                 }
                 p {
                     text-align: center;
                     font-size: 15px;
-                    letter-spacing: 0.01em;
+                    letter-spacing: -0.01em;
                     line-height: 25px;
                     color: rgba(255, 255, 255, 0.64);
                     font-weight: 300 !important;
-                    padding: 0px 49px;
+                    padding: 0px 55px;
                 }
             }
         }
@@ -122,10 +124,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 22px;
+            gap: 30px;
+            margin-top: -5px;
 
             div {
-                padding: 15px 0px;
+                padding: 0px;
                 img {
                     border-radius: 50%;
                     border: 2px solid var(--white-color);
@@ -138,7 +141,7 @@
                 font-family: var(--font-inter);
                 font-weight: 300 !important;
                 font-size: 13.2px;
-                letter-spacing: 0.05px;
+                letter-spacing: 0.06px;
                 color: #ffffffad;
                 opacity: 0.9;
             }
@@ -147,8 +150,9 @@
         .heroImagesWrapper {
             display: flex;
             flex-direction: column;
-            // justify-content: center;
             align-items: center;
+            position: relative;
+            margin-top: 60px;
 
             .imageSection {
                 width: 720px;
@@ -192,12 +196,18 @@
             .stepsCountWrapper {
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-end;
                 padding: 20px 15px;
                 gap: 100px;
-                background: radial-gradient(circle, rgba(0, 0, 0, 0.5), black);
-                position: relative;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.85)
+                );
+                height: 98.6%;
+                position: absolute;
                 bottom: 0;
+                margin-bottom: -20px;
 
                 .singleCount {
                     span {
@@ -216,6 +226,10 @@
                         align-items: center;
                         gap: 16px;
                         margin-top: 5px;
+
+                        i {
+                            transform: rotate(-5deg);
+                        }
 
                         p {
                             font-family: var(--font-inter);

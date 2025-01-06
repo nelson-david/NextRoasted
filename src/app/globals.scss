@@ -1,6 +1,8 @@
 :root {
     --white-color: #ffffff;
     --yellow-color: rgb(223, 255, 26);
+    --link-color: #ffffffeb;
+    --link-hover-color: #ffffffbf;
 }
 
 html {
@@ -11,7 +13,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../assets/background.webp");
     background-size: cover;
-    background-attachment: fixed;
+    background-position: top;
     color: var(--white-color);
     height: 100%;
     margin: 0px;
