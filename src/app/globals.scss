@@ -10,6 +10,7 @@
 html {
     background: #000000;
     overflow-x: hidden !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 body {
@@ -30,6 +31,7 @@ img {
     object-position: center;
     object-fit: cover;
 }
+
 .spin svg {
     -webkit-animation: spin-animation 1.5s infinite linear;
     animation: spin-animation 1.5s infinite linear;
