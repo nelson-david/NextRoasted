@@ -1,5 +1,13 @@
 @mixin percent-5 {
     width: 3%;
+
+    @media (max-width: 991.5px) {
+        width: 6%;
+    }
+
+    @media (max-width: 809.5px) {
+        width: 3%;
+    }
 }
 
 .footer {
@@ -20,6 +28,10 @@
         background-repeat: repeat-x;
         background-position: 0 0, 0 calc(100% - 3px), calc(100% - 3px) 0,
             calc(100% - 3px) calc(100% - 3px);
+
+        @media (max-width: 809.5px) {
+            height: auto;
+        }
 
         .start {
             @include percent-5;
@@ -99,6 +111,25 @@
                         &:hover {
                             color: var(--link-hover-color);
                         }
+                    }
+                }
+            }
+
+            @media (max-width: 991.5px) {
+                width: 88%;
+                padding: 0px 25px;
+            }
+
+            @media (max-width: 809.5px) {
+                width: 94%;
+                padding: 0px 25px;
+                ul {
+                    display: block;
+                    li {
+                        width: 100% !important;
+                        display: flex;
+                        justify-content: center !important;
+                        padding: 20px 0px;
                     }
                 }
             }

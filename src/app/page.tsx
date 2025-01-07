@@ -7,9 +7,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { steps } from "./data/steps";
 import { StepProps } from "./types";
+import GetRoastedModal from "./components/modal/GetRoastedModal";
 
 const Home = () => {
     const [currentHeaderImageIndex, setCurrentHeaderImageIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -21,11 +23,19 @@ const Home = () => {
             });
         }, 1000);
 
-        return () => clearInterval(interval);
+        return () => {
+            clearInterval(interval);
+        };
     }, []);
+
+    const closeModal = () => {
+        document.body.style.overflow = "auto";
+        setIsOpen(false);
+    };
 
     return (
         <div className="App">
+            <GetRoastedModal isOpen={isOpen} closeModal={closeModal} />
             <div className={styles.wrapper}>
                 <div className={styles.heroSection}>
                     <h3>roasted.</h3>
@@ -51,7 +61,12 @@ const Home = () => {
 
                     <div className={styles.ctaButtonWrapper}>
                         <div>
-                            <button>
+                            <button
+                                onClick={() => {
+                                    document.body.style.overflow = "hidden";
+                                    setIsOpen(true);
+                                }}
+                            >
                                 Roast me for Free{" "}
                                 <span>Depends on Availability</span>
                             </button>
@@ -80,24 +95,6 @@ const Home = () => {
                     </div>
 
                     <div className={styles.heroImagesWrapper}>
-                        <div className={styles.stepsCountWrapper}>
-                            {steps.map((step: StepProps, index: number) => {
-                                return (
-                                    <div
-                                        key={index}
-                                        className={styles.singleCount}
-                                    >
-                                        <span>{index + 1}</span>
-
-                                        <div>
-                                            <i>{step.icon}</i>
-                                            <p>{step.title}</p>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-
                         <div className={styles.imageSection}>
                             <div className={styles.macStyleWindow}>
                                 <div className={styles.macStyleWindowHeader}>
@@ -116,6 +113,24 @@ const Home = () => {
                                     height={290}
                                 />
                             </div>
+                        </div>
+
+                        <div className={styles.stepsCountWrapper}>
+                            {steps.map((step: StepProps, index: number) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className={styles.singleCount}
+                                    >
+                                        <span>{index + 1}</span>
+
+                                        <div>
+                                            <i>{step.icon}</i>
+                                            <p>{step.title}</p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

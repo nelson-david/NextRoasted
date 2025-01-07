@@ -3,6 +3,15 @@
 
     .heroSection {
         padding: 90px 50px;
+
+        @media (max-width: 635.5px) {
+            padding: 70px 30px;
+        }
+
+        @media (max-width: 560.5px) {
+            padding: 70px 20px;
+        }
+
         h3 {
             font-family: var(--font-inter);
             font-weight: 600 !important;
@@ -69,6 +78,59 @@
                     padding: 0px 55px;
                 }
             }
+
+            @media (max-width: 635.5px) {
+                div {
+                    width: 100%;
+
+                    h1 {
+                        font-size: 32px;
+                    }
+                    p {
+                        padding: 0px 88px;
+                        margin-top: -10px;
+                    }
+                }
+            }
+
+            @media (max-width: 515.5px) {
+                div {
+                    h1 {
+                        font-size: 31px;
+                    }
+                    p {
+                        padding: 0px 35px;
+                        margin-top: -10px;
+                    }
+                }
+            }
+
+            @media (max-width: 495.5px) {
+                div {
+                    h1 {
+                        font-size: 30px;
+                        letter-spacing: -0.05em;
+                    }
+                    p {
+                        padding: 0px 25px;
+                        margin-top: -10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            @media (max-width: 425.5px) {
+                div {
+                    h1 {
+                        font-size: 34px;
+                        letter-spacing: -0.04em;
+                        line-height: 44px;
+                    }
+                    p {
+                        padding: 0px;
+                    }
+                }
+            }
         }
 
         .ctaButtonWrapper {
@@ -81,6 +143,10 @@
                 flex-direction: column;
                 gap: 13px;
                 padding: 20px 0px;
+
+                @media (max-width: 635.5px) {
+                    width: 480px;
+                }
 
                 button {
                     box-shadow: none;
@@ -157,6 +223,22 @@
             .imageSection {
                 width: 720px;
 
+                @media (max-width: 750.5px) {
+                    width: 696px;
+                }
+
+                @media (max-width: 710.5px) {
+                    width: 620px;
+                }
+
+                @media (max-width: 635.5px) {
+                    width: 565px;
+                }
+
+                @media (max-width: 595.5px) {
+                    width: 100%;
+                }
+
                 .macStyleWindow {
                     padding: 4px;
                     padding-bottom: 0.5px;
@@ -189,6 +271,41 @@
                         width: 100%;
                         height: 465px;
                         border-radius: 8px;
+
+                        @media (max-width: 810.5px) {
+                            height: 460px;
+                        }
+
+                        @media (max-width: 750.5px) {
+                            height: 440px;
+                        }
+
+                        @media (max-width: 710.5px) {
+                            height: 400px;
+                        }
+
+                        @media (max-width: 635.5px) {
+                            height: 360px;
+                        }
+
+                        @media (max-width: 595.5px) {
+                            height: 340px;
+                        }
+
+                        @media (max-width: 515.5px) {
+                            height: 320px;
+                        }
+
+                        @media (max-width: 495.5px) {
+                            height: 290px;
+                        }
+
+                        @media (max-width: 455.5px) {
+                            height: 260px;
+                        }
+                        @media (max-width: 425.5px) {
+                            height: 250px;
+                        }
                     }
                 }
             }
@@ -208,6 +325,7 @@
                 position: absolute;
                 bottom: 0;
                 margin-bottom: -20px;
+                width: 100%;
 
                 .singleCount {
                     span {
@@ -229,6 +347,7 @@
 
                         i {
                             transform: rotate(-5deg);
+                            animation: bounceRotate 1.5s ease-in-out infinite;
                         }
 
                         p {
@@ -241,7 +360,122 @@
                         }
                     }
                 }
+
+                @media (max-width: 991.5px) {
+                    gap: 60px;
+
+                    .singleCount {
+                        div {
+                            gap: 14px;
+                        }
+                    }
+                }
+
+                @media (max-width: 870.5px) {
+                    gap: 50px;
+
+                    .singleCount {
+                        div {
+                            gap: 13px;
+
+                            p {
+                                font-size: 14px;
+                                letter-spacing: 0.02px;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 825.5px) {
+                    gap: 40px;
+                    width: 715px;
+                    height: 97%;
+                    border-radius: 10px;
+                    margin-bottom: -10px;
+
+                    .singleCount {
+                        div {
+                            gap: 10px;
+
+                            svg {
+                                width: 23px;
+                                height: 23px;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 750.5px) {
+                    width: 690px;
+                }
+
+                @media (max-width: 710.5px) {
+                    width: 614px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    top: 0;
+                    height: 94%;
+                    margin-top: 26px;
+                    gap: 15px;
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0.4),
+                        rgba(0, 0, 0, 0.9)
+                    );
+
+                    .singleCount {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        gap: 15px;
+
+                        span {
+                            display: block;
+                            width: auto;
+                        }
+
+                        div {
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 635.5px) {
+                    width: 560px;
+                    height: 92.8%;
+                }
+
+                @media (max-width: 595.5px) {
+                    position: relative;
+                    margin-top: -40px;
+                    // .singleCount {
+                    //     margin-top: 50px;
+                    //     margin-bottom: -60px;
+                    // }
+                }
             }
         }
+    }
+}
+
+@keyframes bounceRotate {
+    0%,
+    100% {
+        transform: translateY(5px) rotate(0deg); /* Starting and ending position */
+    }
+    25% {
+        transform: translateY(-10px) rotate(-10deg); /* Slight left rotation and upward motion */
+    }
+    50% {
+        transform: translateY(-20px) rotate(0deg); /* Highest point, no rotation */
+    }
+    75% {
+        transform: translateY(-10px) rotate(10deg); /* Slight right rotation and downward motion */
     }
 }

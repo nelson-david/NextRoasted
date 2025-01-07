@@ -1,0 +1,48 @@
+.customInput {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid rgba(136, 136, 136, 0.1);
+    background-color: rgba(186, 186, 186, 0.05);
+    color: #999999;
+    padding: 12px;
+    font-family: var(--font-inter);
+    letter-spacing: -0.02em;
+    line-height: 1.2em;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+
+    &::placeholder {
+        color: #999999;
+    }
+}
+
+.customButton {
+    box-shadow: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+    font-weight: 400 !important;
+    font-size: 13.5px;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--white-color);
+
+    &#yellow {
+        background-color: var(--yellow-color) !important;
+        color: var(--black-color);
+        font-weight: 500 !important;
+        font-size: 14px;
+        letter-spacing: -0.3px;
+    }
+}
