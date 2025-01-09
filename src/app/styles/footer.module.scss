@@ -1,5 +1,6 @@
 @mixin percent-5 {
     width: 3%;
+    border: 3px solid transparent;
 
     @media (max-width: 991.5px) {
         width: 6%;
@@ -14,51 +15,57 @@
     .footerContentWrapper {
         display: flex;
         height: 80px;
-        // border-top: 1px dashed rgba(255, 255, 255, 0.2);
-        // border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
 
+        // Ensure declarations come before nested rules
         border: 5px solid transparent;
         position: relative;
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.18) 40%,
-            transparent 0%
-        );
-        background-size: 23px 1.5px; /* Adjust dash and gap size */
-        background-repeat: repeat-x;
-        background-position: 0 0, 0 calc(100% - 3px), calc(100% - 3px) 0,
-            calc(100% - 3px) calc(100% - 3px);
 
-        @media (max-width: 809.5px) {
-            height: auto;
+        // Wrap background-image to opt into new Sass behavior
+        & {
+            background-image: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.18) 40%,
+                transparent 0%
+            );
+            background-size: 23px 1.5px; /* Adjust dash and gap size */
+            background-repeat: repeat-x;
+            background-position: 0 0, 0 calc(100% - 3px), calc(100% - 3px) 0,
+                calc(100% - 3px) calc(100% - 3px);
         }
 
         .start {
             @include percent-5;
-            border: 3px solid transparent;
-            position: relative;
-            background-image: linear-gradient(
-                to bottom,
-                rgba(255, 255, 255, 0.18) 40%,
-                transparent 0%
-            );
-            background-size: 1.5px 18px;
-            background-repeat: repeat-y;
-            background-position: right;
+
+            // Wrap background-image to opt into new Sass behavior
+            & {
+                position: relative;
+                background-image: linear-gradient(
+                    to bottom,
+                    rgba(255, 255, 255, 0.18) 40%,
+                    transparent 0%
+                );
+                background-size: 1.5px 18px;
+                background-repeat: repeat-y;
+                background-position: right;
+            }
         }
+
         .end {
             @include percent-5;
-            border: 3px solid transparent;
-            position: relative;
-            background-image: linear-gradient(
-                to bottom,
-                rgba(255, 255, 255, 0.18) 40%,
-                transparent 0%
-            );
-            background-size: 1.5px 20px;
-            background-repeat: repeat-y;
-            background-position: left;
+            // Wrap background-image to opt into new Sass behavior
+            & {
+                position: relative;
+                background-image: linear-gradient(
+                    to bottom,
+                    rgba(255, 255, 255, 0.18) 40%,
+                    transparent 0%
+                );
+                background-size: 1.5px 20px;
+                background-repeat: repeat-y;
+                background-position: left;
+            }
         }
+
         .center {
             width: 94%;
             display: flex;
@@ -123,8 +130,10 @@
             @media (max-width: 809.5px) {
                 width: 94%;
                 padding: 0px 25px;
+
                 ul {
                     display: block;
+
                     li {
                         width: 100% !important;
                         display: flex;
@@ -134,7 +143,12 @@
                 }
             }
         }
+
+        @media (max-width: 809.5px) {
+            height: auto;
+        }
     }
+
     .footerContentWrapper:last-child {
         border: none;
         height: 50px;

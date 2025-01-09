@@ -3,9 +3,43 @@ import { Inter } from "next/font/google";
 import "./grid.scss";
 import "./globals.scss";
 
+// export const metadata: Metadata = {
+//     title: "Roast my Hero Section - The Urban Studio",
+//     description: "Roasted by The Urban Studio",
+// };
+
 export const metadata: Metadata = {
+    metadataBase: new URL("https://roasted.theurban.studio"),
     title: "Roast my Hero Section - The Urban Studio",
     description: "Roasted by The Urban Studio",
+    icons: {
+        icon: "/favicon.ico",
+    },
+    alternates: {
+        canonical: "https://roasted.theurban.studio",
+        languages: {
+            "en-NG": "/en-NG",
+            "en-GH": "/de-GH",
+        },
+    },
+    openGraph: {
+        title: "Roast my Hero Section - The Urban Studio",
+        description: "Roasted by The Urban Studio",
+        images: "https://pbs.twimg.com/card_img/1876029518747508736/aLfcXHKr?format=jpg&name=medium",
+        url: "https://roasted.theurban.studio",
+        siteName: "Roasted by The Urban Studio",
+    },
+
+    keywords: [
+        "Roasted",
+        "Clone",
+        "Roasted by The Urban Studio",
+        "The Urban Studio",
+        "David Chikabadu Ogwu-Nelson",
+        "David Chika",
+        "The Urban Dev",
+    ],
+    applicationName: "Roasted by The Urban Studio",
 };
 
 export const viewport: Viewport = {
