@@ -3,11 +3,6 @@ import { Inter } from "next/font/google";
 import "./grid.scss";
 import "./globals.scss";
 
-// export const metadata: Metadata = {
-//     title: "Roast my Hero Section - The Urban Studio",
-//     description: "Roasted by The Urban Studio",
-// };
-
 export const metadata: Metadata = {
     metadataBase: new URL("https://roasted.theurban.studio"),
     title: "Roast my Hero Section - The Urban Studio",
