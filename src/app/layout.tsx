@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     description: "Roasted by The Urban Studio",
     icons: {
         icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
     },
     alternates: {
         canonical: "https://roasted.theurban.studio",
